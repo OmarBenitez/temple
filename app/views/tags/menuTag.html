@@ -1,0 +1,39 @@
+*{
+ * Tag del menu
+ *
+ * @author Beny
+ * @version 1
+ * @since 17/oct/2014
+}*
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <span class="logo">Temple</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                %{
+                                for(t in _titles){
+                                    }%
+                                    <li>
+                                        <a class="page-scroll" href="#${t}">${t.capitalize()}</a>
+                                    </li>
+                                    %{
+                                }
+                            }%
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+

@@ -1,0 +1,46 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+#{menuTag titles:['cargar', 'contacto']/}
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading logo">Temple</h1>
+                    <p class="intro-text">Una aplicacion para crear horarios<br></p>
+                    <a href="#cargar" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section id="cargar" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Subir horario</h2>
+            <div class="form">
+                <form action="@{CargarArchivo.getHorarioByFile()}" method="POST" enctype="multipart/form-data" class="dropzone" id="formCargarDocumentos">     
+                </form>
+                <div class="form-footer">  
+                    <div class="btn btn-default col-md-12 drop-zone-up-btn" id="btn-up-files">Subir</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="contacto" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contacto</h2>
+        </div>
+    </div>
+</section>
+
+
