@@ -7,3 +7,6 @@ require:
     - play -> sass 1.1
     - play -> paginate 0.12
     - play -> crud
+    - org.json -> json 20090211
+    - net.sourceforge.jexcelapi -> jxl 2.6.12
+    - org.apache.poi -> poi 3.10-FINAL

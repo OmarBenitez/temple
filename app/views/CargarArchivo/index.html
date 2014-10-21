@@ -19,7 +19,7 @@
 </header>
 
 
-<section id="cargar" class="container content-section text-center">
+<section id="cargar" class="container content-section text-center" ng-controller="dropCtrl">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Subir horario</h2>
@@ -27,7 +27,7 @@
                 <form action="@{CargarArchivo.getHorarioByFile()}" method="POST" enctype="multipart/form-data" class="dropzone" id="formCargarDocumentos">     
                 </form>
                 <div class="form-footer">  
-                    <div class="btn btn-default col-md-12 drop-zone-up-btn" id="btn-up-files">Subir</div>
+                    <div class="btn btn-default col-md-12 drop-zone-up-btn" id="btn-up-files" ng-click="dropClick">Subir</div>
                 </div>
             </div>
         </div>
@@ -43,4 +43,23 @@
     </div>
 </section>
 
+<div id="loading" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+        </div>
+        <div class="modal-body">
+            <h1>Me gusta la publicidad... y el cosmos!</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
 
