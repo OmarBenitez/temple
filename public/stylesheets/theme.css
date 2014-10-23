@@ -255,10 +255,6 @@ a:focus {
     height: 100%;
 }
 
-.navbar-brand {
-    
-}
-
 @-webkit-keyframes pulse {    
     0 {
         -webkit-transform: scale(1);
